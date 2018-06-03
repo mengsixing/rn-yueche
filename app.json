@@ -1,27 +1,14 @@
 {
   "expo": {
-    "name": "yueche580",
-    "description": "This project is really great.",
-    "slug": "yueche580",
-    "privacy": "public",
     "sdkVersion": "27.0.0",
-    "platforms": ["ios", "android"],
+    "name": "Your App Name",
     "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "slug": "your-app-slug",
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.yhlben.yourappname"
+    },
+    "android": {
+      "package": "com.yhlben.yourappname"
     }
   }
 }
