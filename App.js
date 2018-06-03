@@ -5,10 +5,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>第一个native程序!</Text>
-        <Text>改变文字会自动刷新.</Text>
-        <Text>在开发工具上摇晃手机.</Text>
-        <Text>再来一行文字2.</Text>
+        <Text>Open up App.js to start working on your app2 安卓!</Text>
       </View>
     );
   }
