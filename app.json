@@ -1,14 +1,15 @@
 {
   "expo": {
     "sdkVersion": "27.0.0",
-    "name": "yueche",
+    "name": "约车580",
+    "icon": "./assets/images/logo.png",
     "version": "1.0.0",
     "slug": "your-app-slug",
     "ios": {
-      "bundleIdentifier": "com.yhlben.yourappname"
+      "bundleIdentifier": "com.yhlbenCompany.yhlben"
     },
     "android": {
-      "package": "com.yhlben.yourappname"
+      "package": "com.yhlbenCompany.yhlben"
     }
   }
 }
