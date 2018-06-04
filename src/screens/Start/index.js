@@ -4,7 +4,7 @@ import {View,Text,StyleSheet,Image,ImageBackground} from 'react-native'
 
 import {Button} from 'antd-mobile'
 
-class First extends React.Component{
+class Start extends React.Component{
   static navigationOptions = {
     title: '约车580',
   };
@@ -59,4 +59,4 @@ const styles=StyleSheet.create({
   }
 });
 
-export default First;
+export default Start;

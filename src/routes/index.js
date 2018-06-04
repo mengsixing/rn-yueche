@@ -1,14 +1,14 @@
 
 import { createStackNavigator } from 'react-navigation';
 
-import FirstScreen from '../screens/FirstPage'
+import StartScreen from '../screens/Start'
 import HomeScreen from '../screens/Home'
 import AboutScreen from '../screens/About'
 
 
 export default createStackNavigator({
-  First: {
-    screen: FirstScreen
+  Start: {
+    screen: StartScreen
   },
   Home: {
     screen: HomeScreen
