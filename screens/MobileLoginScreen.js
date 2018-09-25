@@ -14,56 +14,41 @@ export default class LoginScreen extends React.Component {
   };
 
   state = {
-    userName: "",
-    password: ""
+    phoneNumber: ""
   };
 
   onPressLearnMore = () => {};
 
-  login = ()=>{
-    console.log('submit login.');
+  getMessageCode = () => {
+    this.props.navigation.navigate('MessageCode',{phoneNumber:this.state.phoneNumber})
   };
 
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.more}>
-          <Text style={styles.moreText}>更多</Text>
-        </View>
-        <Image
-          source={require("../assets/images/loginLogo.jpg")}
-          style={styles.welcomeImage}
-        />
-        <View style={styles.formItem}>
-          <Text style={styles.formItemLabel}>账号</Text>
-          <TextInput
-            style={styles.formItemUserName}
-            onChangeText={text => this.setState({ userName: text })}
-            placeholder="手机号/邮箱/优程会员名"
-            value={this.state.userName}
-          />
+        <View>
+          <Text style={styles.headerTitle}>短信验证码登录</Text>
         </View>
         <View style={styles.formItem}>
-          <Text style={styles.formItemLabel}>密码</Text>
+          <Text style={styles.formItemLabel}>手机号归属地</Text>
+          <Text style={styles.formItemButton}>中国大陆</Text>
+        </View>
+
+        <View style={styles.formItem}>
+          <Text style={styles.formItemLabel}>+86</Text>
           <TextInput
             style={styles.formItemUserName}
-            onChangeText={text => this.setState({ password: text })}
-            placeholder="请输入登录密码"
-            password={true}
-            secureTextEntry={true}
-            value={this.state.password}
+            onChangeText={text => this.setState({ phoneNumber: text })}
+            placeholder="请输入您的手机号"
+            value={this.state.phoneNumber}
           />
         </View>
         <TouchableOpacity
-          onPress={this.login}
+          onPress={this.getMessageCode}
           style={styles.submitButton}
         >
-          <Text style={styles.submitButtontext}>登录</Text>
+          <Text style={styles.submitButtontext}>获取验证码</Text>
         </TouchableOpacity>
-        <View style={styles.otherLogin}>
-          <Text>忘记密码?</Text>
-          <Text>短信验证码登录</Text>
-        </View>
       </View>
     );
   }
@@ -76,18 +61,11 @@ const styles = StyleSheet.create({
     padding: 15,
     backgroundColor: "#fff"
   },
-  more: {
-    width: "100%"
-  },
-  moreText: {
-    lineHeight: 30,
-    textAlign: "right"
-  },
-  welcomeImage: {
-    height: 124,
-    width: 91,
-    marginTop: 20,
-    marginBottom: 25
+  headerTitle: {
+    textAlign: "center",
+    fontSize: 27,
+    fontWeight: "600",
+    marginBottom: 40
   },
   formItem: {
     width: "100%",
@@ -95,10 +73,15 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     borderBottomWidth: 1,
     borderColor: "rgb(241, 241, 241)",
+    justifyContent: "space-between",
     marginBottom: 15
   },
   formItemLabel: {
-    width: 42,
+    width: 100,
+    lineHeight: 42
+  },
+  formItemButton:{
+    width: 70,
     lineHeight: 42
   },
   formItemUserName: {
@@ -115,15 +98,5 @@ const styles = StyleSheet.create({
     lineHeight: 50,
     textAlign: "center",
     color: "#fff"
-  },
-  otherLogin: {
-    flex: 1,
-    marginTop: 20,
-    width: "100%",
-    flexDirection: "row",
-    justifyContent: "space-between"
-  },
-  otherLoginText: {
-    color: "#d00"
   }
 });

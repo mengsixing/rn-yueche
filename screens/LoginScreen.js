@@ -62,7 +62,7 @@ export default class LoginScreen extends React.Component {
         </TouchableOpacity>
         <View style={styles.otherLogin}>
           <Text>忘记密码?</Text>
-          <Text>短信验证码登录</Text>
+          <Text onPress={() => this.props.navigation.navigate('MobileLogin')}>短信验证码登录</Text>
         </View>
       </View>
     );

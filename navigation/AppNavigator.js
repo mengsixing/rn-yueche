@@ -1,15 +1,17 @@
+import { createStackNavigator } from "react-navigation";
 
-import { createStackNavigator } from 'react-navigation';
-
-import HomeScreen from '../screens/LoginScreen'
-import AboutScreen from '../screens/About'
-
+import HomeScreen from "../screens/LoginScreen";
+import MobileLoginScreen from "../screens/MobileLoginScreen";
+import MessageCodeScreen from "../screens/MessageCodeScreen";
 
 export default createStackNavigator({
   Home: {
     screen: HomeScreen
   },
-  About: {
-    screen: AboutScreen
+  MobileLogin: {
+    screen: MobileLoginScreen
   },
+  MessageCode: {
+    screen: MessageCodeScreen
+  }
 });
