@@ -1,9 +1,3 @@
-yueche
+## react-native 约车
 
-## 技术栈
-
-* react-native
-* react-navigation
-* styled-components
-* axios
-* antd-mobile
+一个react-native开发的约车项目。
